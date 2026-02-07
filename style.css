@@ -1,0 +1,48 @@
+body{
+  background-image: url("wallper-jpg.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Doraemon */
+.doraemon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: walk 8s linear infinite;
+  animation-play-state: paused;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Image */
+img{
+  height: 220px;
+}
+
+/* Play Icon */
+.play-icon{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Walk Animation */
+@keyframes walk{
+  from{ left: 0; }
+  to{ left: 80%; }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doremon Walk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Hidden Music -->
+<audio id="music">
+  <source src="doremon.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Doraemon (Play Button) -->
+<div class="doraemon" id="doraemon">
+  <div class="play-icon" id="playIcon">▶</div>
+  <img src="doremon-gif.gif">
+</div>
+
+<script>
+const music = document.getElementById("music");
+const doraemon = document.getElementById("doraemon");
+const playIcon = document.getElementById("playIcon");
+
+doraemon.addEventListener("click", function(){
+
+  if(music.paused){
+    music.play();
+    doraemon.style.animationPlayState = "running";
+    playIcon.style.display = "none";
+  }
+  else{
+    music.pause();
+    doraemon.style.animationPlayState = "paused";
+    playIcon.style.display = "flex";
+  }
+
+});
+</script>
+
+</body>
+</html>
